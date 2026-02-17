@@ -4,7 +4,7 @@ import urllib3
 
 http = urllib3.PoolManager()
 
-API_URL = os.environ.get("API_URL")  # Set this in Lambda env variables
+API_URL = os.environ.get("API_URL")
 
 def extract_schema_info(detail):
     request_params = detail.get("requestParameters", {})
@@ -23,13 +23,12 @@ def extract_schema_info(detail):
         "schema_version_arn": schema_version_arn
     }
 
-
 def lambda_handler(event, context):
     try:
         detail = event.get("detail", {})
         event_name = detail.get("eventName")
 
-        # Only proceed for schema-related updates
+
         if event_name not in [
             "CreateSchema",
             "RegisterSchemaVersion",

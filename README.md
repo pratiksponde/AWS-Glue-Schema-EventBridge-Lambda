@@ -1,4 +1,4 @@
-# AWS Glue Schema EventBridge Lambda
+# How to Get Real-Time Notifications When AWS Glue Schema Registry Changes
 
 > Real-time notifications for AWS Glue Schema Registry changes using EventBridge and Lambda.
 
@@ -67,25 +67,25 @@ This solution follows a serverless, event-driven architecture:
 
 **Step 1: Create Lambda Function**
 
-Runtime: Python 3.10+
+1. Runtime: Python 3.10+
 
-Upload lambda_function.py
+2. Upload lambda_function.py
 
-Set environment variable:
+3. Set environment variable:
 
 API_URL=https://your-api-endpoint.com
 
 **Step 2: Create EventBridge Rule**
 
-Go to EventBridge Console
+1. Go to EventBridge Console
 
-Create new rule
+2. Create new rule
 
-Select Event Pattern
+3. Select Event Pattern
 
-Use the provided JSON pattern
+4. Use the provided JSON pattern
 
-Set target as Lambda function
+5. Set target as Lambda function
 
 **Step 3: Verify CloudTrail**
 
@@ -97,11 +97,11 @@ CloudTrail → Trails → Management Events → Enabled
 
 Lambda execution role should have minimum permissions:
 
-logs:CreateLogGroup
-logs:CreateLogStream
-logs:PutLogEvents
-glue:GetSchema
-glue:GetSchemaVersion
+1. logs:CreateLogGroup
+2. logs:CreateLogStream
+3. logs:PutLogEvents
+4. glue:GetSchema
+5. glue:GetSchemaVersion
 
 If calling external API, ensure network access is configured.
 
@@ -109,31 +109,31 @@ If calling external API, ensure network access is configured.
 
 To test:
 
-Create a new schema in Glue Schema Registry
+1. Create a new schema in Glue Schema Registry
 
 OR
 
-Register a new schema version
+2. Register a new schema version
 
 Then verify:
 
-Lambda is triggered
+* Lambda is triggered
 
-Logs appear in CloudWatch
+* Logs appear in CloudWatch
 
-Notification is received
+* Notification is received
 
 # 🧰 Technologies Used
 
-AWS Glue Schema Registry
+* AWS Glue Schema Registry
 
-AWS CloudTrail
+* AWS CloudTrail
 
-Amazon EventBridge
+* Amazon EventBridge
 
-AWS Lambda
+* AWS Lambda
 
-Python
+* Python
 
 # 🤝 Contributing
 
@@ -141,13 +141,9 @@ Contributions, improvements, and suggestions are welcome.
 
 Feel free to open an issue or pull request.
 
-# 📄 License
-
-MIT License
-
 # 👨‍💻 Author
 
 Pratik Ponde
 
-GitHub: https://github.com/pratiksponde
-DEV: https://dev.to/pratik_26
+* GitHub: https://github.com/pratiksponde
+* DEV: https://dev.to/pratik_26

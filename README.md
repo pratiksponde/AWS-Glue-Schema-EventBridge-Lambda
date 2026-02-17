@@ -43,3 +43,92 @@ This solution follows a serverless, event-driven architecture:
 ---
 
 # 📂 Repository Structure
+.
+├── lambda_function.py # Main Lambda handler
+├── event_pattern.json # EventBridge rule pattern
+├── requirements.txt # Dependencies (if any)
+└── README.md # Project documentation
+
+
+# ⚙️ How It Works
+
+<img width="2704" height="1968" alt="image" src="https://github.com/user-attachments/assets/955dde90-0a5d-4848-9c12-3db5aeff859a" />
+
+
+Step-by-step flow:
+
+1. A schema is created or updated in AWS Glue Schema Registry.
+
+2. CloudTrail records the API call.
+
+3. EventBridge detects the event using a rule pattern.
+
+4. EventBridge invokes the Lambda function.
+
+5. Lambda extracts schema details and sends notification payload.
+
+---
+
+🛠️ Deployment Steps
+Step 1: Create Lambda Function
+
+Runtime: Python 3.10+
+
+Upload lambda_function.py
+
+Set environment variable:
+
+API_URL=https://your-api-endpoint.com
+
+Step 2: Create EventBridge Rule
+
+Go to EventBridge Console
+
+Create new rule
+
+Select Event Pattern
+
+Use the provided JSON pattern
+
+Set target as Lambda function
+
+Step 3: Verify CloudTrail
+
+Ensure CloudTrail is enabled and logging management events.
+
+CloudTrail → Trails → Management Events → Enabled
+
+🧪 Testing
+
+To test:
+
+Create a new schema in Glue Schema Registry
+
+OR
+
+Register a new schema version
+
+Then verify:
+
+Lambda is triggered
+Logs appear in CloudWatch
+Notification is received
+
+🧰 Technologies Used
+
+AWS Glue Schema Registry
+AWS CloudTrail
+Amazon EventBridge
+AWS Lambda
+Python
+
+📄 License
+
+MIT License
+
+👨‍💻 Author
+
+Pratik Ponde
+
+GitHub: https://github.com/pratiksponde
+DEV: https://dev.to/pratik_26

@@ -48,6 +48,7 @@ This solution follows a serverless, event-driven architecture:
 <img width="2704" height="1968" alt="image" src="https://github.com/user-attachments/assets/955dde90-0a5d-4848-9c12-3db5aeff859a" />
 
 
+
 **Step-by-step flow:**
 
 1. A schema is created or updated in AWS Glue Schema Registry.

@@ -1,4 +1,4 @@
-**# AWS Glue Schema EventBridge Lambda**
+# AWS Glue Schema EventBridge Lambda
 
 > Real-time notifications for AWS Glue Schema Registry changes using EventBridge and Lambda.
 
@@ -9,7 +9,7 @@ https://dev.to/pratik_26/how-to-get-real-time-notifications-when-aws-glue-schema
 
 ---
 
-**# 🚀 Architecture Overview**
+# 🚀 Architecture Overview
 
 This solution follows a serverless, event-driven architecture:
 
@@ -43,7 +43,7 @@ This solution follows a serverless, event-driven architecture:
 ---
 
 
-**# ⚙️ How It Works**
+# ⚙️ How It Works
 
 <img width="2704" height="1968" alt="image" src="https://github.com/user-attachments/assets/955dde90-0a5d-4848-9c12-3db5aeff859a" />
 
@@ -62,7 +62,7 @@ This solution follows a serverless, event-driven architecture:
 
 ---
 
-**🛠️ Deployment Steps**
+# 🛠️ Deployment Steps**
 
 **Step 1: Create Lambda Function**
 
@@ -92,7 +92,7 @@ Ensure CloudTrail is enabled and logging management events.
 
 CloudTrail → Trails → Management Events → Enabled
 
-**🔐 Required IAM Permissions**
+# 🔐 Required IAM Permissions
 
 Lambda execution role should have minimum permissions:
 
@@ -104,7 +104,7 @@ glue:GetSchemaVersion
 
 If calling external API, ensure network access is configured.
 
-**🧪 Testing**
+# 🧪 Testing
 
 To test:
 
@@ -122,7 +122,7 @@ Logs appear in CloudWatch
 
 Notification is received
 
-**🧰 Technologies Used**
+# 🧰 Technologies Used
 
 AWS Glue Schema Registry
 
@@ -134,17 +134,17 @@ AWS Lambda
 
 Python
 
-**🤝 Contributing**
+# 🤝 Contributing
 
 Contributions, improvements, and suggestions are welcome.
 
 Feel free to open an issue or pull request.
 
-**📄 License**
+# 📄 License
 
 MIT License
 
-**👨‍💻 Author**
+# 👨‍💻 Author
 
 Pratik Ponde
 

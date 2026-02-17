@@ -62,7 +62,7 @@ This solution follows a serverless, event-driven architecture:
 
 ---
 
-# 🛠️ Deployment Steps**
+# 🛠️ Deployment Steps
 
 **Step 1: Create Lambda Function**
 
